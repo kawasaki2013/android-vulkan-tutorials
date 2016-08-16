@@ -12,17 +12,20 @@ Additional Android Studio/NDK samples:
 
 Pre-requisites
 --------------
-- Android Studio 2.1 preview 6
+- Android N device, API >= 24
+- Android Studio 2.2 beta1 or better
 - Android NDK
     * [NDK-r12](https://github.com/android-ndk/ndk/wiki), compile as is
-    * [NDK-r11](http://developer.android.com/ndk/downloads/index.html) needs shaderc from ndk-r12, and validation layer code from [github](https://github.com/KhronosGroup/Vulkan-LoaderAndValidationLayers) *android_layers* branch
-    * NDK-R10x and earlier needs shaderc, validation layer source code, and vulkan headers from ndk-r11 --copy headers from NDK-r11 *android-24/your-abi/usr/include/vulkan* to your own include directory
-    * Project build.gradle needs to be modified to compile with ndk version that is NOT R12
+    * SDK with the latest cmake package
 
+Known Issues
+------------
+ - cmake package version taged 3.6 inside sdk does NOT work well with ndk-r13-beta1, so skip that ndk version
+ 
 Getting Started
 ---------------
-1. [Download Android Studio](http://developer.android.com/sdk/index.html)
-1. [Download Android NDK-R12](https://github.com/android-ndk/ndk/wiki)
+1. [Download Android Studio](http://tools.android.com/download/studio/canary)
+1. [Download Android NDK-R12+](https://github.com/android-ndk/ndk/wiki)
 1. [Download source code](http://www.github.com/googlesamples/android-vulkan-tutorials)
 1. Launch Android Studio.
 1. "Import Project" of the interested tutorial project to Android Studio
